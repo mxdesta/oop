@@ -1,10 +1,10 @@
 #include "sol.h"  
 
 std::string replacer(int n, char old_Value, char new_Value,  std::string text) {
-    int counter {0};
-    int count_symbol {0};
+    unsigned int counter {0};
+    unsigned int count_symbol {0};
 
-    for (int count = 0; count < text.size(); ++count){
+    for (int size_t = 0; size_t < text.size(); ++size_t){
         count_symbol++;
     }
     if (n <= 0 || n > count_symbol){
@@ -12,7 +12,7 @@ std::string replacer(int n, char old_Value, char new_Value,  std::string text) {
         }
     for (int i = 0; i < text.size(); ++i) {  
         if (text[i] == old_Value) {
-            counter += 1;
+            counter ++;
         }
         if (counter == n) {
             text[i] = new_Value;
